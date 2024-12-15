@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam Dabral - Futuristic Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Mono:wght@300;400;700&display=swap');
+        
+        :root {
+            --bg-primary: #f7fafc; /* Light background for brightness */
+            --text-primary: #2d3748; /* Darker text for contrast */
+            --text-secondary: #718096; /* Lighter text for secondary info */
+            --accent-color: #00ff00; /* Green accent color */
+        }
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-secondary);
+            cursor: none;
+        }
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+        }
+        .custom-cursor.expand {
+            transform: translate(-50%, -50%) scale(3);
+            background-color: rgba(0, 255, 255, 0.2);
+        }
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .tech-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            transition: all 0.3s ease;
+            perspective: 1000px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .tech-card:hover {
+            transform: rotateX(10deg) rotateY(10deg);
+            box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+            border-color: var(--accent-color);
+        }
+        .tech-card .icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .tech-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .tech-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .glitch-text {
+            position: relative;
+            text-shadow: 
+                2px 2px 0 #00ffff,
+                -2px -2px 0 #ff00ff;
+            animation: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="custom-cursor" class="custom-cursor"></div>
+
+    <!-- Header Section -->
+    <header class="text-center mb-16 bg-opacity-10 p-8">
+        <h1 class="text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+            Shyam Dabral
+        </h1>
+        <p class="text-2xl font-mono text-green-300 mb-2">
+            AI/ML Researcher | Future Innovator
+        </p>
+        <div class="flex justify-center space-x-4 mt-6">
+            <a href="mailto:shyamdabral1@gmail.com" class="text-cyan-300 hover:text-cyan-100 transition-colors">
+                shyamdabral1@gmail.com
+            </a>
+            <a href="tel:9625172523" class="text-cyan-300 hover:text-cyan-100 transition-colors">
+                9625172523
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- About Me Section -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl mb-8 text-center">About Me</h2>
+            <p class="text-lg text-center text-gray-700 mb-4">
+                Hello, I'm Shyam Dabral, an AI/ML researcher and a passionate innovator focused on creating futuristic solutions that bridge the gap between human and machine interaction. 
+                With years of experience in cutting-edge technologies like Deep Learning, Computer Vision, and NLP, my mission is to push the boundaries of artificial intelligence and create systems that make a meaningful impact.
+            </p>
+            <p class="text-lg text-center text-gray-700">
+                I specialize in designing intelligent systems that not only solve real-world problems but also pave the way for the next wave of AI-driven innovation. In my spare time, I love learning about emerging technologies, reading, and working on projects that challenge my creativity and technical skills.
+            </p>
+        </section>
+
+        <!-- Technical Arsenal Section -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl mb-8 text-center">Technical Arsenal</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="tech-card p-6 rounded-lg text-center">
+                    <div class="icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>
+                        Python is one of the most versatile languages for AI/ML research. I use Python for building machine learning models, data analysis, and scripting. Libraries like TensorFlow, PyTorch, and Pandas are essential to my workflow.
+                    </p>
+                </div>
+                <div class="tech-card p-6 rounded-lg text-center">
+                    <div class="icon">🖥️</div>
+                    <h3>C/C++</h3>
+                    <p>
+                        C and C++ are powerful languages for system-level programming. I use them to build high-performance software, optimize algorithms, and work with hardware-level interactions, particularly for AI model optimization.
+                    </p>
+                </div>
+                <div class="tech-card p-6 rounded-lg text-center">
+                    <div class="icon">🌐</div>
+                    <h3>Java</h3>
+                    <p>
+                        Java is my go-to language for backend development and building scalable, multi-threaded applications. I use it in AI research and cloud-based systems for building distributed architectures.
+                    </p>
+                </div>
+                <div class="tech-card p-6 rounded-lg text-center">
+                    <div class="icon">🔹</div>
+                    <h3>HTML</h3>
+                    <p>
+                        HTML5 is the foundation of web development, allowing me to build semantic, accessible, and scalable web structures. It powers the layout and content of every modern website.
+                    </p>
+                </div>
+                <div class="tech-card p-6 rounded-lg text-center">
+                    <div class="icon">🔸</div>
+                    <h3>CSS</h3>
+                    <p>
+                        CSS3 is used to create visually appealing layouts, responsive designs, and animations. I use advanced CSS techniques, including Flexbox, Grid, and custom animations for interactive interfaces.
+                    </p>
+                </div>
+                <div class="tech-card p-6 rounded-lg text-center">
+                    <div class="icon">💻</div>
+                    <h3>JavaScript</h3>
+                    <p>
+                        JavaScript is the backbone of dynamic web applications. From DOM manipulation to asynchronous operations, I leverage JavaScript to create interactive and high-performance user experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Domains Section -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl mb-8 text-center">Research Domains</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="tech-card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-green-300 mb-4">Computer Vision</h3>
+                    <p class="text-cyan-100">
+                        Pushing boundaries of image recognition through advanced deep learning architectures and neural network innovations.
+                    </p>
+                </div>
+                <div class="tech-card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-green-300 mb-4">NLP Frontiers</h3>
+                    <p class="text-cyan-100">
+                        Developing cutting-edge language models that bridge communication gaps and unlock new realms of human-AI interaction.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Form) -->
+        <section class="text-center mt-16">
+            <h2 class="section-title text-3xl mb-8">Contact Me</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Please fill out the form below to get in touch with me for collaborations, opportunities, or inquiries. I'm always open to discussing new ideas and innovations!
+            </p>
+            <form action="your_form_processing_script.php" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Your Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Your Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Your Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded" required></textarea>
+                </div>
+                <button type="submit" class="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-400 transition-colors">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Custom Cursor
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+
+        // Cursor Expand on Hover
+        const hoverElements = document.querySelectorAll('a, .tech-card, button');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('expand');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('expand');
+            });
+        });
+    </script>
+</body>
+</html>
